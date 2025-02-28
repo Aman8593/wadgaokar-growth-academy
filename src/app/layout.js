@@ -1,22 +1,6 @@
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { geistMono, geistSans, montserrat } from "@/components/Font";
+import Navbar from "@/components/Navbar";
 import "./global.scss";
-import Navbar from "./components/Navbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["300", "400", "700"], // Adjust weights as needed
-});
-
 
 export const metadata = {
   title: "Wadgaonkar Growth Academy",
@@ -26,8 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable}`}>
-        <Navbar/>
+      <body
+        className={`${montserrat.className} ${geistSans.className} ${geistMono.className}`}
+      >
+        <Navbar />
         {children}
       </body>
     </html>
