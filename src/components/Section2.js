@@ -1,9 +1,58 @@
 import React from "react";
 import "../styles/Section2.scss";
-import Image from "next/image";
 import Section2card from "./Section2-card";
 
 const Section2Comp = () => {
+  const cardData = [
+    {
+      id: 1,
+      imageUrl: "/images/icon1.jpg",
+      title: "All Inclusive",
+      description: "Advance Your Job",
+    },
+    {
+      id: 2,
+      imageUrl: "/images/icon2.jpg",
+      title: "Professional Advice",
+      description: "Trading, Investing",
+    },
+    {
+      id: 3,
+      imageUrl: "/images/icon3.jpg",
+      title: "Real-time Market",
+      description: "Practice Sessions",
+    },
+    {
+      id: 4,
+      imageUrl: "/images/icon4.jpg",
+      title: "Ongoing guidance &",
+      description: "Post-Course Assistance",
+    },
+    {
+      id: 5,
+      imageUrl: "/images/icon5.jpg",
+      title: "Become certified in order to",
+      description: "Advance hour Job",
+    },
+    {
+      id: 6,
+      imageUrl: "/images/icon6.jpg",
+      title: "100% Practical",
+      description: "Training & Skills",
+    },
+    {
+      id: 7,
+      imageUrl: "/images/icon7.jpg",
+      title: "Demat & Trading",
+      description: "Account Opening",
+    },
+    {
+      id: 8,
+      imageUrl: "/images/icon8.jpg",
+      title: "Flexible learning",
+      description: "Online / Offline Classes",
+    },
+  ];
   return (
     <div className="section2-container">
       <div className="sect2-heading">
@@ -28,40 +77,16 @@ const Section2Comp = () => {
       </div>
       <div className="sect2-cards-container">
         <div className="sect2-cards-wrapper">
-          
-          <Section2card 
-            imageUrl="/images/card-1.jpg"
-            title="All Inclusive"
-            description="Advance Your Job"
-
-          />
-          
-          <Section2card 
-            imageUrl="/images/card-1.jpg"
-            title="All Inclusive"
-            description="Advance Your Job"
-
-          />
-          <Section2card 
-            imageUrl="/images/card-1.jpg"
-            title="All Inclusive"
-            description="Advance Your Job"
-
-          />
-          <Section2card 
-            imageUrl="/images/card-1.jpg"
-            title="All Inclusive"
-            description="Advance Your Job"
-
-          />
-          <Section2card 
-            imageUrl="/images/card-1.jpg"
-            title="All Inclusive"
-            description="Advance Your Job"
-
-          />
-         
-          
+          {cardData.map((data, _) => {
+            return (
+              <Section2card
+                imageUrl={data.imageUrl}
+                title={data.title}
+                description={data.description}
+                id={data.id}
+              />
+            );
+          })}
 
           {/* <div className="card">
             <div className="icon-container">

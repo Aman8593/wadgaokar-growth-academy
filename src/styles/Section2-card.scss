@@ -4,17 +4,15 @@
   flex-direction: column;
   text-align: center;
   background: white;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 15px;
   // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  height: 100%;
-  justify-content: space-between;
-  
+  height: 110px;
 
   &:nth-child(odd) {
-    border: 2px solid #fdcd00;
+    border: 3px solid #fdcd00;
   }
 
   &:nth-child(even) {
@@ -28,6 +26,15 @@
   .icon-container {
     width: 100%;
     display: flex;
+    height: 20px;
+  }
+
+  .blue-icon {
+    &::after {
+      border: 3px solid #04a1dd;
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
   }
 
   .icon {
@@ -36,20 +43,56 @@
     height: 80px;
     border-radius: 50%;
     margin-top: -60px;
+    left: 29px;
   }
 
   .content {
     text-align: right;
-    position: relative;
-    top: -10px;
+    width: 100%;
     h3 {
-      font-size: 30px;
+      font-size: 25px;
       font-weight: bold;
       color: #333;
     }
     p {
-      font-size: 22px;
+      font-size: 20px;
       color: #666;
     }
+  }
+}
+
+.card figure {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  // margin-top: -80px;
+  position: relative;
+
+  &::before {
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    /* top: -60px; */
+    left: 20px;
+    width: 100%;
+    margin-top: -70px;
+    height: 100%;
+    /* transform: translate(-50%, -50%); */
+    border: 10px solid #ebedec;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  }
+
+  &::after {
+    content: "";
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    border-radius: 50%;
+    margin-top: -68px;
+    left: 20px;
+    border: 3px solid #fdcd00;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
   }
 }
