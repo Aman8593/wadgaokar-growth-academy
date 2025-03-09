@@ -16,20 +16,20 @@ const Navbar = () => {
         </div>
         <div className="navbar-links-cont">
           <div className="navbar-links">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#about">Gallery</a>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/gallery">Gallery</a>
             <div className="dropdown">
               <a href="#courses" className="dropbtn">
                 Courses
               </a>
               <div className="dropdown-content">
-                <a href="#free-demo">Free Demo</a>
-                <a href="#basic-price-action">Basic Price Action</a>
-                <a href="#advance-price-action">Advance Price Action</a>
+                <a href="/free-demo">Free Demo</a>
+                <a href="/basic-price-action">Basic Price Action</a>
+                <a href="/advance-price-action">Advance Price Action</a>
               </div>
             </div>
-            <a href="#about">Services</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact Us</a>
           </div>
         </div>
