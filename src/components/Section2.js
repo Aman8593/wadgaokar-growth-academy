@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Section2.scss";
 import Image from "next/image";
+import Section2card from "./Section2-card";
 
 const Section2Comp = () => {
   return (
@@ -27,7 +28,42 @@ const Section2Comp = () => {
       </div>
       <div className="sect2-cards-container">
         <div className="sect2-cards-wrapper">
-          <div className="card">
+          
+          <Section2card 
+            imageUrl="/images/card-1.jpg"
+            title="All Inclusive"
+            description="Advance Your Job"
+
+          />
+          
+          <Section2card 
+            imageUrl="/images/card-1.jpg"
+            title="All Inclusive"
+            description="Advance Your Job"
+
+          />
+          <Section2card 
+            imageUrl="/images/card-1.jpg"
+            title="All Inclusive"
+            description="Advance Your Job"
+
+          />
+          <Section2card 
+            imageUrl="/images/card-1.jpg"
+            title="All Inclusive"
+            description="Advance Your Job"
+
+          />
+          <Section2card 
+            imageUrl="/images/card-1.jpg"
+            title="All Inclusive"
+            description="Advance Your Job"
+
+          />
+         
+          
+
+          {/* <div className="card">
             <div className="icon-container">
               <Image
                 src="/images/card-1.jpg"
@@ -73,23 +109,7 @@ const Section2Comp = () => {
               <p>All Inclusive</p>
               <h3>Advance Your Job</h3>
             </div>
-          </div>
-
-          <div className="card">
-            <div className="icon-container">
-              <Image
-                src="/images/card-1.jpg"
-                alt="Icon"
-                width={100}
-                height={100}
-                className="icon"
-              />
-            </div>
-            <div className="content">
-              <p>All Inclusive</p>
-              <h3>Advance Your Job</h3>
-            </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -22,63 +22,67 @@
   }
   .sect2-cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    // grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
     justify-items: center;
     gap: 1rem;
     width: 90vw;
+    margin: 0 auto;
 
-    .card {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-      width: 100%;
+    
+    // .card {
+    //   display: flex;
+    //   align-items: center;
+    //   flex-direction: column;
+    //   text-align: center;
+    //   background: white;
+    //   border-radius: 10px;
+    //   padding: 15px;
+    //   // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    //   transition: transform 0.3s ease-in-out;
+    //   width: 100%;
 
-      &:nth-child(odd) {
-        border: 2px solid #fdcd00;
-      }
+    //   &:nth-child(odd) {
+    //     border: 2px solid #fdcd00;
+    //   }
 
-      &:nth-child(even) {
-        border: 3px solid #04a1dd;
-      }
+    //   &:nth-child(even) {
+    //     border: 3px solid #04a1dd;
+    //   }
 
-      &:hover {
-        transform: translateY(-5px);
-      }
+    //   &:hover {
+    //     transform: translateY(-5px);
+    //   }
 
-      .icon-container {
-        width: 100%;
-        display: flex;
-      }
+    //   .icon-container {
+    //     width: 100%;
+    //     display: flex;
+    //   }
 
-      .icon {
-        position: relative;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        margin-top: -60px;
-      }
+    //   .icon {
+    //     position: relative;
+    //     width: 80px;
+    //     height: 80px;
+    //     border-radius: 50%;
+    //     margin-top: -60px;
+    //   }
 
-      .content {
-        text-align: right;
-        position: relative;
-        top: -10px;
-        h3 {
-          font-size: 30px;
-          font-weight: bold;
-          color: #333;
-        }
-        p {
-          font-size: 22px;
-          color: #666;
-        }
-      }
-    }
+    //   .content {
+    //     text-align: right;
+    //     position: relative;
+    //     top: -10px;
+    //     h3 {
+    //       font-size: 30px;
+    //       font-weight: bold;
+    //       color: #333;
+    //     }
+    //     p {
+    //       font-size: 22px;
+    //       color: #666;
+    //     }
+    //   }
+    // }
 
     // .card {
     //   background: #fff;

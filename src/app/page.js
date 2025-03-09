@@ -4,12 +4,13 @@ import Section2Comp from "@/components/Section2";
 export default function Home() {
   return (
     <div>
-      <section id="#section1">
+      <section id="home">
         <Section1Comp />
       </section>
-      <section id="#section2">
+      <section id="services">
         <Section2Comp />
       </section>
+      
     </div>
   );
 }
