@@ -29,13 +29,15 @@ const Section2Comp = () => {
         <div className="sect2-cards-wrapper">
           <div className="card">
             <div className="icon-container">
-              <Image
-                src="/images/card-1.jpg"
-                alt="Icon"
-                width={100}
-                height={100}
-                className="icon"
-              />
+              <figure>
+                <Image
+                  src="/images/icon1.jpg"
+                  alt="Icon"
+                  width={100}
+                  height={100}
+                  className="icon"
+                />
+              </figure>
             </div>
             <div className="content">
               <p>All Inclusive</p>
@@ -45,13 +47,15 @@ const Section2Comp = () => {
 
           <div className="card">
             <div className="icon-container">
-              <Image
-                src="/images/card-1.jpg"
-                alt="Icon"
-                width={100}
-                height={100}
-                className="icon"
-              />
+              <figure className="blue-icon">
+                <Image
+                  src="/images/icon2.jpg"
+                  alt="Icon"
+                  width={100}
+                  height={100}
+                  className="icon"
+                />
+              </figure>
             </div>
             <div className="content">
               <p>All Inclusive</p>
@@ -61,13 +65,15 @@ const Section2Comp = () => {
 
           <div className="card">
             <div className="icon-container">
-              <Image
-                src="/images/card-1.jpg"
-                alt="Icon"
-                width={100}
-                height={100}
-                className="icon"
-              />
+              <figure>
+                <Image
+                  src="/images/icon3.jpg"
+                  alt="Icon"
+                  width={100}
+                  height={100}
+                  className="icon"
+                />
+              </figure>
             </div>
             <div className="content">
               <p>All Inclusive</p>
@@ -77,13 +83,87 @@ const Section2Comp = () => {
 
           <div className="card">
             <div className="icon-container">
-              <Image
-                src="/images/card-1.jpg"
-                alt="Icon"
-                width={100}
-                height={100}
-                className="icon"
-              />
+              <figure className="blue-icon">
+                <Image
+                  src="/images/icon4.jpg"
+                  alt="Icon"
+                  width={100}
+                  height={100}
+                  className="icon"
+                />
+              </figure>
+            </div>
+            <div className="content">
+              <p>All Inclusive</p>
+              <h3>Advance Your Job</h3>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="icon-container">
+              <figure>
+                <Image
+                  src="/images/icon5.jpg"
+                  alt="Icon"
+                  width={100}
+                  height={100}
+                  className="icon"
+                />
+              </figure>
+            </div>
+            <div className="content">
+              <p>All Inclusive</p>
+              <h3>Advance Your Job</h3>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="icon-container">
+              <figure className="blue-icon">
+                <Image
+                  src="/images/icon6.jpg"
+                  alt="Icon"
+                  width={100}
+                  height={100}
+                  className="icon"
+                />
+              </figure>
+            </div>
+            <div className="content">
+              <p>All Inclusive</p>
+              <h3>Advance Your Job</h3>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="icon-container">
+              <figure>
+                <Image
+                  src="/images/icon7.jpg"
+                  alt="Icon"
+                  width={100}
+                  height={100}
+                  className="icon"
+                />
+              </figure>
+            </div>
+            <div className="content">
+              <p>All Inclusive</p>
+              <h3>Advance Your Job</h3>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="icon-container">
+              <figure className="blue-icon">
+                <Image
+                  src="/images/icon8.jpg"
+                  alt="Icon"
+                  width={100}
+                  height={100}
+                  className="icon"
+                />
+              </figure>
             </div>
             <div className="content">
               <p>All Inclusive</p>
