@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Section2.scss";
 import Section2card from "./Section2-card";
+import { geistMono, geistSans, montserrat, poppins } from "./Font";
 
 const Section2Comp = () => {
   const cardData = [
@@ -55,12 +56,12 @@ const Section2Comp = () => {
   ];
   return (
     <div className="section2-container">
-      <div className="sect2-heading">
+      <div className={`sect2-heading`}>
         <h2>
           Change Your Financial Future With <br /> Courses on the Stock Market
         </h2>
       </div>
-      <div className="sect2-title">
+      <div className={`sect2-title ${poppins.className}`}>
         <p>
           Achieving financial growth through trading requires the right
           knowledge and skills. Share market classes provide comprehensive
@@ -76,7 +77,7 @@ const Section2Comp = () => {
         </p>
       </div>
       <div className="sect2-cards-container">
-        <div className="sect2-cards-wrapper">
+        <div className={`sect2-cards-wrapper ${poppins.className}`}>
           {cardData.map((data, index) => {
             return (
               <Section2card
