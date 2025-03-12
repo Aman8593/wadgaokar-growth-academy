@@ -77,13 +77,14 @@ const Section2Comp = () => {
       </div>
       <div className="sect2-cards-container">
         <div className="sect2-cards-wrapper">
-          {cardData.map((data, _) => {
+          {cardData.map((data, index) => {
             return (
               <Section2card
                 imageUrl={data.imageUrl}
                 title={data.title}
                 description={data.description}
-                id={data.id}
+                id={index + 1}
+                key={index}
               />
             );
           })}
