@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/Section2-card.scss";
 const Section2card = ({ imageUrl, title, description, id }) => {
   return (
-    <div className="card">
+    <div className={id > 4 ? "card2" : "card"}>
       <div className="icon-container">
         <figure className={id % 2 === 0 ? "blue-icon" : ""}>
           <Image

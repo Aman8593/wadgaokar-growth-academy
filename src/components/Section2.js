@@ -80,69 +80,33 @@ const Section2Comp = () => {
         <div className={`sect2-cards-wrapper ${poppins.className}`}>
           {cardData.map((data, index) => {
             return (
-              <Section2card
-                imageUrl={data.imageUrl}
-                title={data.title}
-                description={data.description}
-                id={index + 1}
-                key={index}
-              />
+              data.id <= 4 && (
+                <Section2card
+                  imageUrl={data.imageUrl}
+                  title={data.title}
+                  description={data.description}
+                  id={index + 1}
+                  key={index}
+                />
+              )
             );
           })}
-
-          {/* <div className="card">
-            <div className="icon-container">
-              <figure className="blue-icon">
-                <Image
-                  src="/images/icon6.jpg"
-                  alt="Icon"
-                  width={100}
-                  height={100}
-                  className="icon"
+        </div>
+        <div></div>
+        <div className={`sect2-cards-wrapper ${poppins.className}`}>
+          {cardData.map((data, index) => {
+            return (
+              data.id > 4 && (
+                <Section2card
+                  imageUrl={data.imageUrl}
+                  title={data.title}
+                  description={data.description}
+                  id={index + 1}
+                  key={index}
                 />
-              </figure>
-            </div>
-            <div className="content">
-              <p>All Inclusive</p>
-              <h3>Advance Your Job</h3>
-            </div>
-          </div>
-
-          <div className="card">
-            <div className="icon-container">
-              <figure>
-                <Image
-                  src="/images/icon7.jpg"
-                  alt="Icon"
-                  width={100}
-                  height={100}
-                  className="icon"
-                />
-              </figure>
-            </div>
-            <div className="content">
-              <p>All Inclusive</p>
-              <h3>Advance Your Job</h3>
-            </div>
-          </div>
-
-          <div className="card">
-            <div className="icon-container">
-              <figure className="blue-icon">
-                <Image
-                  src="/images/icon8.jpg"
-                  alt="Icon"
-                  width={100}
-                  height={100}
-                  className="icon"
-                />
-              </figure>
-            </div>
-            <div className="content">
-              <p>All Inclusive</p>
-              <h3>Advance Your Job</h3>
-            </div>
-          </div> */}
+              )
+            );
+          })}
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
   text-align: center;
   background: white;
   border-radius: 20px;
-  padding: 15px 15px 0 0; 
+  padding: 15px 15px 0 0;
   // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   width: 100%;
@@ -94,5 +94,33 @@
     border-top-color: transparent;
     border-left-color: transparent;
     transform: rotate(45deg);
+  }
+}
+
+.card2 {
+  @extend .card;
+
+  &:nth-child(even) {
+    border: 3px solid #fdcd00;
+  }
+
+  &:nth-child(odd) {
+    border: 3px solid #04a1dd;
+  }
+
+  .blue-icon {
+    &::after {
+      border: 3px solid #fdcd00;
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+
+  & figure {
+    &::after {
+      border: 3px solid #04a1dd;
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
   }
 }
