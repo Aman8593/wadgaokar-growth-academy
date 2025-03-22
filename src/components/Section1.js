@@ -5,10 +5,9 @@ import Image from "next/image";
 
 const Section1Comp = () => {
   const images = [
-    "/images/sect1-img.jpg",
     "/images/homepg-img1.jpg",
-    "/images/homepg-img1.jpg",
-    "/images/homepg-img1.jpg",
+    "/images/homepg-img2.jpg",
+    "/images/homepg-img3.jpg",
     "/images/homepg-img1.jpg",
     "/images/homepg-img1.jpg",
   ];

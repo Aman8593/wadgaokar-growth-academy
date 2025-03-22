@@ -31,7 +31,12 @@ const Section3Comp = () => {
     <div className="section3-container">
       <div className="sect3-heading">
         <h2>Our popular courses</h2>
+        <p>
+          Explore all of our courses and pick your suitable ones to enroll and
+          start learning with us! We ensure that you will never regret it!
+        </p>
       </div>
+      
 
       <div className="sect3-cards-container">
         <div className="sect3-cards-wrapper">
