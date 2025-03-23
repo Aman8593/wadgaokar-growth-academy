@@ -1,7 +1,80 @@
+"use client"
+import { Form, Input } from "antd";
 import "../styles/Contact.scss";
+import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone_no: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const notifySuccess = () => {
+    console.log("Entered success func toast");
+    toast.success("Message sent");
+  };
+
+  const notifyError = () => {
+    toast.error("Failed to send message");
+  };
+
+  const handleChange = (name, value) => {
+    // const { name, value } = event.target;
+    console.log({ name, value });
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    // event.preventDefault();
+    setLoading(true);
+    const emailJsUrl = "https://api.emailjs.com/api/v1.0/email/send";
+    const emailData = {
+      service_id: "service_h5r8inp",
+      template_id: "template_krzx3nn",
+      user_id: "gmYL4P1zgaLRZnNL0",
+      template_params: {
+        to_name: "Ram",
+        user_name: formData.name,
+        user_email: formData.email,
+        phone_no: formData.phone_no,
+        message: formData.message,
+      },
+    };
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+    try {
+      const response = await axios.post(emailJsUrl, emailData);
+      console.log(response.data);
+      // change to response.ok
+      if (response.status === 200) {
+        notifySuccess();
+        setFormData({
+          name: "",
+          email: "",
+          phone_no: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      if (error.name === "AbortError") {
+        console.log("Request aborted due to timeout");
+      }
+      notifyError();
+    } finally {
+      setLoading(false);
+      clearTimeout(timeoutId);
+    }
+  };
   return (
+
     <div className="contact-container">
       {/* Left Side: Background Image + Contact Info */}
       <div className="contact-left">
@@ -69,7 +142,7 @@ const ContactUs = () => {
 
       {/* Right Side: Contact Form */}
       <div className="contact-right">
-        <form className="contact-form">
+        <form onSubmit={handleSubmit} className="contact-form">
           <h2 className="form-heading">Contact Us</h2>
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
@@ -77,7 +150,10 @@ const ContactUs = () => {
               id="name"
               type="text"
               placeholder="Your Name"
+              value={formData.name}
+              onChange={(e) => handleChange("name", e.target.value)}
               className="input-field"
+              required
             />
           </div>
           <div className="form-group">
@@ -86,6 +162,20 @@ const ContactUs = () => {
               id="email"
               type="email"
               placeholder="Your Email"
+              value={formData.email}
+              onChange={(e) => handleChange("email", e.target.value)}
+              className="input-field"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="phone_no">Phone Number</label>
+            <input
+              id="phone_no"
+              type="text"
+              placeholder="Your Phone Number"
+              value={formData.phone_no}
+              onChange={(e) => handleChange("phone_no", e.target.value)}
               className="input-field"
             />
           </div>
@@ -94,15 +184,19 @@ const ContactUs = () => {
             <textarea
               id="message"
               placeholder="Your Message"
+              value={formData.message}
+              onChange={(e) => handleChange("message", e.target.value)}
               className="input-field"
               rows="4"
+              required
             ></textarea>
           </div>
-          <button type="submit" className="submit-btn">
-            Send Message
+          <button type="submit" className="submit-btn" disabled={loading}>
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
